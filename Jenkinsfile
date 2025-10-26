@@ -33,8 +33,8 @@ pipeline {
         stage('Deploy to S3') {
             environment {
                 // Load AWS credentials from Jenkins credential store
-                AWS_ACCESS_KEY_ID = credentials('aws-access-key-id')
-                AWS_SECRET_ACCESS_KEY = credentials('aws-secret-access-key')
+                AWS_ACCESS_KEY_ID = credentials('AKIA6AGKFTIA25H7A22S')
+                AWS_SECRET_ACCESS_KEY = credentials('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')
             }
             steps {
                 echo "☁️ Deploying build files to S3..."
@@ -48,8 +48,8 @@ pipeline {
 
         stage('Invalidate CloudFront Cache') {
             environment {
-                AWS_ACCESS_KEY_ID = credentials('aws-access-key-id')
-                AWS_SECRET_ACCESS_KEY = credentials('aws-secret-access-key')
+                AWS_ACCESS_KEY_ID = credentials('AKIA6AGKFTIA25H7A22S')
+                AWS_SECRET_ACCESS_KEY = credentials('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')
             }
             steps {
                 echo "🚀 Invalidating CloudFront cache..."
